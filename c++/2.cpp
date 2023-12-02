@@ -1,3 +1,6 @@
+#include <vector>
+#include <algorithm>
+
 int longestArithSeqLength(std::vector<int> nums) {
    int maxLength = 0;
 
