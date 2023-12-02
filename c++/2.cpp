@@ -1,7 +1,3 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
-
 int longestArithSeqLength(std::vector<int> nums) {
    int maxLength = 0;
 
@@ -12,4 +8,13 @@ int longestArithSeqLength(std::vector<int> nums) {
            int count = 2;
 
            for (int k = y+1; k < nums.size(); k++) {
-               if (nums[k] - lastNum ==```
+               if (nums[k] - lastNum == diff) {
+                    count++;
+                    lastNum = nums[k];
+               }
+           }
+           maxLength = std::max(maxLength, count);
+       }
+   }
+   return maxLength;
+}
