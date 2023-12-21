@@ -1,6 +1,6 @@
 def longest_arith_seq_length(nums):
     max_length = 0
-    
+
     for i in range(len(nums)):
      for y in range(i+1, len(nums)):
          diff = nums[y] - nums[i]
